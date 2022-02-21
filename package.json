@@ -10,8 +10,8 @@
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook -o ./public",
-    "pack_lib": "cd dist/example-sb-angular-lib && npm pack",
-    "publish_lib": "cd dist/example-sb-angular-lib && npm publish"
+    "pack_lib": "cd dist/sb-legendre-lib && npm pack",
+    "publish_lib": "cd dist/sb-legendre-lib && npm publish"
   },
   "private": true,
   "dependencies": {
