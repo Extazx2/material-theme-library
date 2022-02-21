@@ -31,3 +31,5 @@ pages:
     - npm run build-storybook
   tags:
     - build-xl
+  except:
+    - tags
