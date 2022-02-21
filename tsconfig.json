@@ -16,6 +16,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "sb-legendre-lib": [
+        "dist/sb-legendre-lib/sb-legendre-lib",
+        "dist/sb-legendre-lib"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [

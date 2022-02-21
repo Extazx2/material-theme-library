@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -99,9 +100,41 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "sb-legendre-lib": {
+      "projectType": "library",
+      "root": "projects/sb-legendre-lib",
+      "sourceRoot": "projects/sb-legendre-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sb-legendre-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sb-legendre-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sb-legendre-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sb-legendre-lib/src/test.ts",
+            "tsConfig": "projects/sb-legendre-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/sb-legendre-lib/karma.conf.js"
           }
         }
       }
