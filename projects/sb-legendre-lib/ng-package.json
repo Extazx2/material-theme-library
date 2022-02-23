@@ -5,6 +5,7 @@
     "entryFile": "src/public-api.ts"
   },
   "assets": [
-    "src/theme/custom-theme.scss"
+    "src/theme/**/*",
+    "../../node_modules/material-design-icons/iconfont/material-icons.css"
   ]
 }

@@ -10,7 +10,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
     moduleMetadata: {
-        imports: [MatButtonModule, MatIconModule]
+        imports: [MatButtonModule]
     },
 } as Meta;
 
@@ -93,6 +93,9 @@ export const Flat: Story<MatButton> = (args: MatButton) => ({
 
 export const Icons: Story<MatButton> = (args: MatButton) => ({
     props: args,
+    moduleMetadata: {
+        imports: [MatIconModule, MatButtonModule]
+    },
     template: `
 <style>
     button {
@@ -102,7 +105,7 @@ export const Icons: Story<MatButton> = (args: MatButton) => ({
 <h3>Icon Buttons</h3>
 <div class="example-button-row">
   <button mat-icon-button aria-label="Example icon-button with a heart icon">
-    <mat-icon>favorite</mat-icon>
+    <mat-icon>home</mat-icon>
   </button>
   <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
     <mat-icon>favorite</mat-icon>
