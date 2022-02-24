@@ -1,8 +1,20 @@
 image: node:16.14.0
 
 stages:
+  - prepare
   - publish
   - deploy-storybook
+  - release
+
+#############
+#############
+# On each commit, we need to bump the
+
+prepare:
+  stage: prepare
+  script:
+    - git tag -a "${npm_package_version}" -m "Bump to version %s"
+    - git push origin --tags
 
 publish:
   stage: publish
@@ -13,6 +25,8 @@ publish:
     - npm config set @liksi:registry https://${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/
     - npm config set //${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken ${CI_JOB_TOKEN}
     - npm run publish_lib
+  after_script:
+    - echo $npm_package_version
   tags:
     - build-xl
   only:
@@ -31,5 +45,19 @@ pages:
     - npm run build-storybook
   tags:
     - build-xl
+  only:
+    - main
+    - develop
   except:
     - tags
+
+release:
+  stage: release
+  script:
+    - echo $npm_package_version
+    # bump version then publish lib
+  tags:
+    - build-xl
+  only:
+    - main
+  when: manual
