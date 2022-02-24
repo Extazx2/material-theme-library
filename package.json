@@ -1,6 +1,6 @@
 {
   "name": "sb-legendre-app",
-  "version": "0.0.1-rc.2",
+  "version": "0.0.1-rc.3",
   "workspaces": [
     "projects/sb-legendre-lib"
   ],
@@ -16,7 +16,8 @@
     "pack_lib": "cd dist/sb-legendre-lib && npm pack",
     "publish_lib": "cd dist/sb-legendre-lib && npm publish",
     "prerelease_version": "npm version prerelease -w projects/sb-legendre-lib --preid rc",
-    "patch_version": "npm version prepatch -w projects/sb-legendre-lib --preid rc"
+    "patch_version": "npm version prepatch -w projects/sb-legendre-lib --preid rc",
+    "postversion": ""
   },
   "private": true,
   "dependencies": {
