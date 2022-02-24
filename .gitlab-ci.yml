@@ -12,6 +12,9 @@ stages:
 
 prepare:
   stage: prepare
+  before_script:
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
   script:
     - git tag -a "$(npm run show_version --silent)" -m "Bump to version $(npm run show_version --silent)"
     - git push origin --tags
