@@ -2,9 +2,9 @@ image: node:16.14.0
 
 stages:
   - prepare
+  - release
   - publish
   - deploy-storybook
-  - release
 
 #############
 #############
@@ -13,7 +13,7 @@ stages:
 prepare:
   stage: prepare
   script:
-    - git tag -a "${npm_package_version}" -m "Bump to version %s"
+    - git tag -a "$(npm run show_version --silent)" -m "Bump to version $(npm run show_version --silent)"
     - git push origin --tags
   tags:
     - build-xl
