@@ -15,6 +15,8 @@ prepare:
   script:
     - git tag -a "${npm_package_version}" -m "Bump to version %s"
     - git push origin --tags
+  tags:
+    - build-xl
 
 publish:
   stage: publish
