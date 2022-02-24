@@ -1,6 +1,6 @@
 {
   "name": "sb-legendre-app",
-  "version": "0.0.2",
+  "version": "0.0.3-rc.0",
   "workspaces": [
     "projects/sb-legendre-lib"
   ],
