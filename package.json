@@ -1,6 +1,6 @@
 {
   "name": "sb-legendre-app",
-  "version": "0.0.1-rc.6",
+  "version": "0.0.1-rc.7",
   "workspaces": [
     "projects/sb-legendre-lib"
   ],
@@ -15,7 +15,7 @@
     "build-storybook": "npm run docs:json && build-storybook -o ./public",
     "pack_lib": "cd dist/sb-legendre-lib && npm pack",
     "publish_lib": "cd dist/sb-legendre-lib && npm publish",
-    "prerelease_version": "npm version prerelease -w projects/sb-legendre-lib --preid rc && git commit --all --amend --no-edit",
+    "prerelease_version": "npm version prerelease -w projects/sb-legendre-lib --preid rc --include-workspace-root true && git commit --all --amend --no-edit",
     "patch_version": "npm version prepatch -w projects/sb-legendre-lib --preid rc && git commit --all --amend --no-edit"
   },
   "private": true,
