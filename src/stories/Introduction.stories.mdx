@@ -7,8 +7,9 @@ import Flow from './assets/flow.svg';
 import Plugin from './assets/plugin.svg';
 import Repo from './assets/repo.svg';
 import StackAlt from './assets/stackalt.svg';
+import pkg from '../../package.json'
 
-<Meta title="Example/Introduction" />
+<Meta title={`Example/Introduction`} />
 
 <style>{`
   .subheading {
@@ -113,6 +114,8 @@ import StackAlt from './assets/stackalt.svg';
 
   
 `}</style>
+
+<h1>Version {pkg.version}</h1>
 
 # Welcome to Storybook
 

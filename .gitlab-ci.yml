@@ -17,7 +17,7 @@ tag_version:
     - git config --global user.email "${GITLAB_USER_EMAIL}"
   script:
     - npm run prerelease_version
-    - git commit -am 'Bumping version to $(npm run show_version --silent)'
+    - git commit -am "Bumping version to $(npm run show_version --silent)"
     - git tag -a "$(npm run show_version --silent)" -m "CI Tagging version $(npm run show_version --silent)"
     - git push --tags https://root:$GITLAB_API_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git
   tags:
