@@ -1,21 +1,17 @@
-import { MatButton, MatButtonModule } from "@angular/material/button";
 import { Meta, Story } from "@storybook/angular/types-6-0";
-import { MatIconModule } from "@angular/material/icon";
+import { MatButton, MatButtonModule, MatRippleModule, MatIconModule } from '../../projects/sb-legendre-lib/src/public-api'
 
 export default {
     title: 'Global/Buttons',
     component: MatButton,
     // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-    moduleMetadata: {
-        imports: [MatButtonModule]
-    },
 } as Meta;
 
 export const Basic: Story<MatButton> = (args: MatButton) => ({
     props: args,
+    moduleMetadata: {
+        imports: [MatButtonModule, MatRippleModule]
+    },
     template: `
 <style>
     button {
@@ -33,9 +29,11 @@ export const Basic: Story<MatButton> = (args: MatButton) => ({
 </div>`
 });
 
-
 export const Raised: Story<MatButton> = (args: MatButton) => ({
     props: args,
+    moduleMetadata: {
+        imports: [MatButtonModule, MatRippleModule]
+    },
     template: `
 <style>
     button {
@@ -55,6 +53,9 @@ export const Raised: Story<MatButton> = (args: MatButton) => ({
 
 export const Stroked: Story<MatButton> = (args: MatButton) => ({
     props: args,
+    moduleMetadata: {
+        imports: [MatButtonModule, MatRippleModule]
+    },
     template: `
 <style>
     button {
@@ -74,6 +75,9 @@ export const Stroked: Story<MatButton> = (args: MatButton) => ({
 
 export const Flat: Story<MatButton> = (args: MatButton) => ({
     props: args,
+    moduleMetadata: {
+        imports: [MatButtonModule, MatRippleModule]
+    },
     template: `
 <style>
     button {
@@ -94,7 +98,7 @@ export const Flat: Story<MatButton> = (args: MatButton) => ({
 export const Icons: Story<MatButton> = (args: MatButton) => ({
     props: args,
     moduleMetadata: {
-        imports: [MatIconModule, MatButtonModule]
+        imports: [MatIconModule, MatButtonModule, MatRippleModule]
     },
     template: `
 <style>
@@ -104,7 +108,7 @@ export const Icons: Story<MatButton> = (args: MatButton) => ({
 </style>
 <h3>Icon Buttons</h3>
 <div class="example-button-row">
-  <button mat-icon-button aria-label="Example icon-button with a heart icon">
+  <button mat-icon-button aria-label="Example icon-button with a home icon">
     <mat-icon>home</mat-icon>
   </button>
   <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
@@ -124,6 +128,9 @@ export const Icons: Story<MatButton> = (args: MatButton) => ({
 
 export const Fab: Story<MatButton> = (args: MatButton) => ({
     props: args,
+    moduleMetadata: {
+        imports: [MatButtonModule, MatRippleModule]
+    },
     template: `
 <style>
     button {
@@ -146,6 +153,9 @@ export const Fab: Story<MatButton> = (args: MatButton) => ({
 
 export const MiniFab: Story<MatButton> = (args: MatButton) => ({
     props: args,
+    moduleMetadata: {
+        imports: [MatButtonModule, MatRippleModule]
+    },
     template: `
 <style>
     button {

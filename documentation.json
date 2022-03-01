@@ -458,14 +458,34 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Accent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Basic",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ButtonGroup.stories.ts",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button>{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+            },
+            {
+                "name": "Basic2",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
                 "name": "context",
@@ -494,8 +514,18 @@
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
+                "type": "Story",
+                "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\" [disabled]=\"disabled\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+            },
+            {
+                "name": "DisableRipple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n  props: args,\n  template: `<div>\n    <p>Click on the buttons to see the difference</p>\n    <button mat-raised-button [color]=\"color\" [disableRipple]=\"disableRipple\">DisableRipple</button>\n    <button mat-raised-button [color]=\"color\">Classic</button>\n</div>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
             },
             {
                 "name": "environment",
@@ -521,31 +551,31 @@
                 "name": "Fab",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ButtonGroup.stories.ts",
+                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
                 "name": "Flat",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ButtonGroup.stories.ts",
+                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
                 "name": "Icons",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ButtonGroup.stories.ts",
+                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatIconModule, MatButtonModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatIconModule, MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a home icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
             },
             {
                 "name": "LoggedIn",
@@ -591,11 +621,11 @@
                 "name": "MiniFab",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ButtonGroup.stories.ts",
+                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
                 "name": "Primary",
@@ -611,11 +641,11 @@
                 "name": "Raised",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/ButtonGroup.stories.ts",
+                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
                 "name": "require",
@@ -636,24 +666,14 @@
                 "type": "literal type"
             },
             {
-                "name": "Secondary",
+                "name": "Stroked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Stroked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/ButtonGroup.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
                 "name": "Template",
@@ -662,8 +682,10 @@
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\">Test</button>`\n})"
+                "type": "Story",
+                "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})",
+                "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
             },
             {
                 "name": "Template",
@@ -700,76 +722,148 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/stories/ButtonGroup.stories.ts": [
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Accent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
                 {
                     "name": "Basic",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/ButtonGroup.stories.ts",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button>{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+                },
+                {
+                    "name": "Basic2",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\" [disabled]=\"disabled\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+                },
+                {
+                    "name": "DisableRipple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<div>\n    <p>Click on the buttons to see the difference</p>\n    <button mat-raised-button [color]=\"color\" [disableRipple]=\"disableRipple\">DisableRipple</button>\n    <button mat-raised-button [color]=\"color\">Classic</button>\n</div>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
                 },
                 {
                     "name": "Fab",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/ButtonGroup.stories.ts",
+                    "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
                 },
                 {
                     "name": "Flat",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/ButtonGroup.stories.ts",
+                    "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
                 },
                 {
                     "name": "Icons",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/ButtonGroup.stories.ts",
+                    "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatIconModule, MatButtonModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
+                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatIconModule, MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a home icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
                 },
                 {
                     "name": "MiniFab",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/ButtonGroup.stories.ts",
+                    "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 },
                 {
                     "name": "Raised",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/ButtonGroup.stories.ts",
+                    "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
                 },
                 {
                     "name": "Stroked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/ButtonGroup.stories.ts",
+                    "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})",
+                    "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                    "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
+                },
+                {
+                    "name": "Warn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ],
             "src/test.ts": [
@@ -812,58 +906,6 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
-                }
-            ],
-            "src/stories/Button.stories.ts": [
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\">Test</button>`\n})"
-                },
-                {
-                    "name": "Warn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -961,7 +1003,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 0,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -1045,7 +1087,87 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Accent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic2",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DisableRipple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Fab",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Flat",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Icons",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MiniFab",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1065,7 +1187,17 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Secondary",
+                "name": "Raised",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Stroked",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1076,9 +1208,9 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
             },
             {
                 "filePath": "src/stories/Button.stories.ts",
@@ -1086,76 +1218,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Warn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/ButtonGroup.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Basic",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/ButtonGroup.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Fab",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/ButtonGroup.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Flat",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/ButtonGroup.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Icons",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/ButtonGroup.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "MiniFab",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/ButtonGroup.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Raised",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/ButtonGroup.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Stroked",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
