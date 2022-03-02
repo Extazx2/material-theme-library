@@ -11,5 +11,8 @@ module.exports = {
   "framework": "@storybook/angular",
   "core": {
     "builder": "webpack5"
+  },
+  resolve: {
+    modules: ["src", "projects"]
   }
 }

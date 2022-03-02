@@ -9,3 +9,13 @@ export * from './lib/sb-legendre-lib.module';
 export * from '@angular/material/button'
 export * from '@angular/material/core'
 export * from '@angular/material/icon'
+export * from '@angular/material/autocomplete'
+export * from '@angular/material/form-field'
+export * from "@angular/material/input"
+export * from "@angular/material/select"
+
+export * from "@angular/material/progress-bar"
+export * from "@angular/material/progress-spinner"
+export * from "@angular/material/checkbox"
+
+// export * from '@angular/material/'

@@ -461,31 +461,83 @@
                 "name": "Accent",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Appearance",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormFieldGroup.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatFormField>",
+                "defaultValue": "(args: MatFormField) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatIconModule]\n    },\n    template: `\n<p>Form field appearance variants</p>\n<p>\n  <mat-form-field appearance=\"legacy\">\n    <mat-label>Legacy form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"standard\">\n    <mat-label>Standard form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Fill form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"outline\">\n    <mat-label>Outline form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>`\n})",
+                "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
+            },
+            {
                 "name": "Basic",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button>{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `<button mat-raised-button>{{text}}</button>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})"
             },
             {
-                "name": "Basic2",
+                "name": "Basic",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/ButtonGroup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
+            },
+            {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `<mat-checkbox>{{text}}</mat-checkbox>`\n})"
+            },
+            {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/input/Input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatInput>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatInputModule]\n    },\n    template: `<input matInput>`\n})"
+            },
+            {
+                "name": "Buffer",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressBar>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"buffer\" [value]=\"value\" [bufferValue]=\"bufferValue\"></mat-progress-bar>`\n})"
+            },
+            {
+                "name": "Colored",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressBar>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar [color]=\"color\" [value]=\"value\"></mat-progress-bar>`\n})"
             },
             {
                 "name": "context",
@@ -508,24 +560,64 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
+                "name": "Determinate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressBar>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"determinate\" [value]=\"value\"></mat-progress-bar>`\n})"
+            },
+            {
+                "name": "Determinate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/spinner/Spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressSpinner>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"determinate\" [value]=\"value\"></mat-progress-spinner>`\n})"
+            },
+            {
+                "name": "Diameter",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/spinner/Spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressSpinner>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"indeterminate\" [diameter]=\"diameter\"></mat-progress-spinner>`\n})"
+            },
+            {
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\" [disabled]=\"disabled\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `<button mat-raised-button [color]=\"color\" [disabled]=\"disabled\">{{text}}</button>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `<mat-checkbox disabled>Disabled Checkbox !</mat-checkbox>`\n})"
             },
             {
                 "name": "DisableRipple",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\n  props: args,\n  template: `<div>\n    <p>Click on the buttons to see the difference</p>\n    <button mat-raised-button [color]=\"color\" [disableRipple]=\"disableRipple\">DisableRipple</button>\n    <button mat-raised-button [color]=\"color\">Classic</button>\n</div>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `<div>\n    <p>Click on the buttons to see the difference</p>\n    <button mat-raised-button [color]=\"color\" [disableRipple]=\"disableRipple\">DisableRipple</button>\n    <button mat-raised-button [color]=\"color\">Classic</button>\n</div>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})"
             },
             {
                 "name": "environment",
@@ -548,34 +640,154 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
+                "name": "error",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "new FormControl('', [Validators.required, Validators.email])"
+            },
+            {
                 "name": "Fab",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/ButtonGroup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
                 "name": "Flat",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/ButtonGroup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
+            },
+            {
+                "name": "FormFieldError",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\" appearance=\"fill\">\n    <mat-label>Email</mat-label>\n    <input type=\"email\" matInput [formControl]=\"emailFormControl\" placeholder=\"Ex. pat@example.com\">\n    <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n      Please enter a valid email address\n    </mat-error>\n    <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n      Email is <strong>required</strong>\n    </mat-error>\n  </mat-form-field>\n</form>\n    `,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, BrowserAnimationsModule, ReactiveFormsModule]\n    },\n})"
+            },
+            {
+                "name": "FormFieldInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<p>\n  <mat-form-field appearance=\"standard\">\n    <mat-label>Standard form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule]\n    },\n})"
+            },
+            {
+                "name": "FormFieldLabel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<div class=\"example-container\">\n    <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n        <input matInput placeholder=\"Simple placeholder\" required>\n    </mat-form-field>\n\n    <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n        <mat-label>Both a label and a placeholder</mat-label>\n        <input matInput placeholder=\"Simple placeholder\">\n    </mat-form-field>\n  \n    <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n        <mat-select required>\n            <mat-option>-- None --</mat-option>\n            <mat-option value=\"option\">Option</mat-option>\n        </mat-select>\n        <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>\n    </mat-form-field>\n</div>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatIconModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
+            },
+            {
+                "name": "FormFieldPrefixAndSuffix",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<div class=\"example-container\">\n  <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n    <mat-label>Phone number</mat-label>\n    <input matInput type=\"tel\" required>\n    <mat-icon matSuffix>phone</mat-icon>\n    <mat-hint>Put your phone number</mat-hint>\n  </mat-form-field>\n\n  <mat-form-field appearance=\"fill\" floatLabel=\"always\" style=\"margin: 3px\">\n    <mat-label>Amount</mat-label>\n    <input matInput type=\"number\" class=\"example-right-align\" placeholder=\"0\">\n    <span matPrefix>$&nbsp;</span>\n    <span matSuffix>.00</span>\n  </mat-form-field>\n</div>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatIconModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
+            },
+            {
+                "name": "FormFieldSelect",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<mat-form-field appearance=\"fill\">\n  <mat-label>Select</mat-label>\n  <mat-select>\n    <mat-option value=\"one\">First option</mat-option>\n    <mat-option value=\"two\">Second option</mat-option>\n  </mat-select>\n</mat-form-field>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
+            },
+            {
+                "name": "FormFieldTextarea",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<mat-form-field appearance=\"fill\">\n  <mat-label>Textarea</mat-label>\n  <textarea matInput></textarea>\n</mat-form-field>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
             },
             {
                 "name": "Icons",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/ButtonGroup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatIconModule, MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a home icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatIconModule, MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a home icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
+            },
+            {
+                "name": "Indeterminate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `\n<mat-checkbox [indeterminate]=\"indeterminate\" (indeterminateChange)=\"console.log('clicked')\">Indeterminate status</mat-checkbox>\n<br/>\n<mat-checkbox [checked]=\"checked\">Checked status</mat-checkbox>\n`\n})"
+            },
+            {
+                "name": "Indeterminate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressBar>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>`\n})"
+            },
+            {
+                "name": "Indeterminate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/spinner/Spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressSpinner>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>`\n})"
+            },
+            {
+                "name": "IndeterminateAlias",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/spinner/Spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatSpinner>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `\n<p>This is an alias for <br/><code>&lt;mat-progress-spinner mode=\"indeterminate\"&gt;&lt;/mat-progress-spinner&gt;</code></p>\n<mat-spinner></mat-spinner>\n`\n})"
+            },
+            {
+                "name": "LabelPosition",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `\n<mat-checkbox labelPosition=\"before\">Label Position before</mat-checkbox>\n<br/>\n<mat-checkbox labelPosition=\"after\">Label position after</mat-checkbox>\n`\n})"
             },
             {
                 "name": "LoggedIn",
@@ -621,31 +833,85 @@
                 "name": "MiniFab",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/ButtonGroup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
+            },
+            {
+                "name": "options",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "['One', 'Two', 'Three']",
+                "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
+            },
+            {
+                "name": "options",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/form-field/FormField.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "['One', 'Two', 'Three']",
+                "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
             },
             {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Query",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressBar>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"query\"></mat-progress-bar>`\n})"
+            },
+            {
                 "name": "Raised",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/ButtonGroup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
+            },
+            {
+                "name": "Readonly",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/input/Input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatInput>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatInputModule]\n    },\n    template: `<input matInput>`\n})"
             },
             {
                 "name": "require",
@@ -669,23 +935,21 @@
                 "name": "Stroked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/ButtonGroup.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatButton>",
-                "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
+                "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
             },
             {
-                "name": "Template",
+                "name": "StrokeWidth",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/spinner/Spinner.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})",
-                "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
-                "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
+                "type": "Story<MatProgressSpinner>",
+                "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"indeterminate\" [strokeWidth]=\"strokeWidth\" [diameter]=\"diameter\"></mat-progress-spinner>`\n})"
             },
             {
                 "name": "Template",
@@ -708,10 +972,32 @@
                 "defaultValue": "(args: Page) => ({\n  props: args,\n})"
             },
             {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `<button mat-raised-button [color]=\"color\">{{text}}</button>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})",
+                "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\" appearance=\"fill\">\n    <mat-label>Number</mat-label>\n    <input type=\"text\"\n           placeholder=\"Pick one\"\n           aria-label=\"Number\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>`,\n    moduleMetadata: {\n        imports: [MatAutocomplete, MatOption, MatFormField, MatLabel, MatAutocompleteModule]\n    },\n})"
+            },
+            {
                 "name": "Warn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/components/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -722,12 +1008,12 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/stories/Button.stories.ts": [
+            "src/stories/components/Button.stories.ts": [
                 {
                     "name": "Accent",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/components/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -737,121 +1023,51 @@
                     "name": "Basic",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/components/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button>{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
-                },
-                {
-                    "name": "Basic2",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `<button mat-raised-button>{{text}}</button>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})"
                 },
                 {
                     "name": "Disabled",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/components/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\" [disabled]=\"disabled\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `<button mat-raised-button [color]=\"color\" [disabled]=\"disabled\">{{text}}</button>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})"
                 },
                 {
                     "name": "DisableRipple",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/components/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<div>\n    <p>Click on the buttons to see the difference</p>\n    <button mat-raised-button [color]=\"color\" [disableRipple]=\"disableRipple\">DisableRipple</button>\n    <button mat-raised-button [color]=\"color\">Classic</button>\n</div>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})"
-                },
-                {
-                    "name": "Fab",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
-                },
-                {
-                    "name": "Flat",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
-                },
-                {
-                    "name": "Icons",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatIconModule, MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a home icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
-                },
-                {
-                    "name": "MiniFab",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `<div>\n    <p>Click on the buttons to see the difference</p>\n    <button mat-raised-button [color]=\"color\" [disableRipple]=\"disableRipple\">DisableRipple</button>\n    <button mat-raised-button [color]=\"color\">Classic</button>\n</div>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})"
                 },
                 {
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/components/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
                 {
-                    "name": "Raised",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
-                },
-                {
-                    "name": "Stroked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatButton>",
-                    "defaultValue": "(args: MatButton) => ({\n  props: args,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n  template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
-                },
-                {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/components/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: args,\n  template: `<button mat-raised-button [color]=\"color\">{{text}}</button>`,\n  moduleMetadata: {\n    imports: [MatButtonModule, MatRippleModule]\n  },\n})",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `<button mat-raised-button [color]=\"color\">{{text}}</button>`,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n})",
                     "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
                     "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
                 },
@@ -859,11 +1075,213 @@
                     "name": "Warn",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/components/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})"
+                }
+            ],
+            "src/stories/components/form-field/FormFieldGroup.stories.ts": [
+                {
+                    "name": "Appearance",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormFieldGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatFormField>",
+                    "defaultValue": "(args: MatFormField) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatIconModule]\n    },\n    template: `\n<p>Form field appearance variants</p>\n<p>\n  <mat-form-field appearance=\"legacy\">\n    <mat-label>Legacy form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"standard\">\n    <mat-label>Standard form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Fill form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"outline\">\n    <mat-label>Outline form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>`\n})",
+                    "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                    "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
+                }
+            ],
+            "src/stories/components/ButtonGroup.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/ButtonGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButton>",
+                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Basic Buttons</h3>\n<div>\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Fab",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/ButtonGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButton>",
+                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Flat",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/ButtonGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButton>",
+                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Icons",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/ButtonGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButton>",
+                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatIconModule, MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a home icon\">\n    <mat-icon>home</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>`\n})"
+                },
+                {
+                    "name": "MiniFab",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/ButtonGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButton>",
+                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Mini Fab Buttons</h3>\n<div>\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Raised",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/ButtonGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButton>",
+                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Raised Buttons</h3>\n<div>\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>`\n})"
+                },
+                {
+                    "name": "Stroked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/ButtonGroup.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButton>",
+                    "defaultValue": "(args: MatButton) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatButtonModule, MatRippleModule]\n    },\n    template: `\n<style>\n    button {\n        margin: 5px;\n    }\n</style>\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>`\n})"
+                }
+            ],
+            "src/stories/components/checkbox/Checkbox.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `<mat-checkbox>{{text}}</mat-checkbox>`\n})"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `<mat-checkbox disabled>Disabled Checkbox !</mat-checkbox>`\n})"
+                },
+                {
+                    "name": "Indeterminate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `\n<mat-checkbox [indeterminate]=\"indeterminate\" (indeterminateChange)=\"console.log('clicked')\">Indeterminate status</mat-checkbox>\n<br/>\n<mat-checkbox [checked]=\"checked\">Checked status</mat-checkbox>\n`\n})"
+                },
+                {
+                    "name": "LabelPosition",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/checkbox/Checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatCheckboxModule]\n    },\n    template: `\n<mat-checkbox labelPosition=\"before\">Label Position before</mat-checkbox>\n<br/>\n<mat-checkbox labelPosition=\"after\">Label position after</mat-checkbox>\n`\n})"
+                }
+            ],
+            "src/stories/components/input/Input.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/input/Input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatInput>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatInputModule]\n    },\n    template: `<input matInput>`\n})"
+                },
+                {
+                    "name": "Readonly",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/input/Input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatInput>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatInputModule]\n    },\n    template: `<input matInput>`\n})"
+                }
+            ],
+            "src/stories/components/progress-bar/ProgressBar.stories.ts": [
+                {
+                    "name": "Buffer",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressBar>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"buffer\" [value]=\"value\" [bufferValue]=\"bufferValue\"></mat-progress-bar>`\n})"
+                },
+                {
+                    "name": "Colored",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressBar>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar [color]=\"color\" [value]=\"value\"></mat-progress-bar>`\n})"
+                },
+                {
+                    "name": "Determinate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressBar>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"determinate\" [value]=\"value\"></mat-progress-bar>`\n})"
+                },
+                {
+                    "name": "Indeterminate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressBar>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>`\n})"
+                },
+                {
+                    "name": "Query",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressBar>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressBarModule]\n    },\n    template: `<mat-progress-bar mode=\"query\"></mat-progress-bar>`\n})"
                 }
             ],
             "src/test.ts": [
@@ -908,6 +1326,58 @@
                     "type": "literal type"
                 }
             ],
+            "src/stories/components/spinner/Spinner.stories.ts": [
+                {
+                    "name": "Determinate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/spinner/Spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressSpinner>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"determinate\" [value]=\"value\"></mat-progress-spinner>`\n})"
+                },
+                {
+                    "name": "Diameter",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/spinner/Spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressSpinner>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"indeterminate\" [diameter]=\"diameter\"></mat-progress-spinner>`\n})"
+                },
+                {
+                    "name": "Indeterminate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/spinner/Spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressSpinner>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>`\n})"
+                },
+                {
+                    "name": "IndeterminateAlias",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/spinner/Spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatSpinner>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `\n<p>This is an alias for <br/><code>&lt;mat-progress-spinner mode=\"indeterminate\"&gt;&lt;/mat-progress-spinner&gt;</code></p>\n<mat-spinner></mat-spinner>\n`\n})"
+                },
+                {
+                    "name": "StrokeWidth",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/spinner/Spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressSpinner>",
+                    "defaultValue": "(args) => ({\n    props: args,\n    moduleMetadata: {\n        imports: [MatProgressSpinnerModule]\n    },\n    template: `<mat-progress-spinner mode=\"indeterminate\" [strokeWidth]=\"strokeWidth\" [diameter]=\"diameter\"></mat-progress-spinner>`\n})"
+                }
+            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -930,6 +1400,90 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/stories/components/form-field/FormField.stories.ts": [
+                {
+                    "name": "error",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "new FormControl('', [Validators.required, Validators.email])"
+                },
+                {
+                    "name": "FormFieldError",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\" appearance=\"fill\">\n    <mat-label>Email</mat-label>\n    <input type=\"email\" matInput [formControl]=\"emailFormControl\" placeholder=\"Ex. pat@example.com\">\n    <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n      Please enter a valid email address\n    </mat-error>\n    <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n      Email is <strong>required</strong>\n    </mat-error>\n  </mat-form-field>\n</form>\n    `,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, BrowserAnimationsModule, ReactiveFormsModule]\n    },\n})"
+                },
+                {
+                    "name": "FormFieldInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<p>\n  <mat-form-field appearance=\"standard\">\n    <mat-label>Standard form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule]\n    },\n})"
+                },
+                {
+                    "name": "FormFieldLabel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<div class=\"example-container\">\n    <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n        <input matInput placeholder=\"Simple placeholder\" required>\n    </mat-form-field>\n\n    <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n        <mat-label>Both a label and a placeholder</mat-label>\n        <input matInput placeholder=\"Simple placeholder\">\n    </mat-form-field>\n  \n    <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n        <mat-select required>\n            <mat-option>-- None --</mat-option>\n            <mat-option value=\"option\">Option</mat-option>\n        </mat-select>\n        <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>\n    </mat-form-field>\n</div>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatIconModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
+                },
+                {
+                    "name": "FormFieldPrefixAndSuffix",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<div class=\"example-container\">\n  <mat-form-field appearance=\"fill\" style=\"margin: 3px\">\n    <mat-label>Phone number</mat-label>\n    <input matInput type=\"tel\" required>\n    <mat-icon matSuffix>phone</mat-icon>\n    <mat-hint>Put your phone number</mat-hint>\n  </mat-form-field>\n\n  <mat-form-field appearance=\"fill\" floatLabel=\"always\" style=\"margin: 3px\">\n    <mat-label>Amount</mat-label>\n    <input matInput type=\"number\" class=\"example-right-align\" placeholder=\"0\">\n    <span matPrefix>$&nbsp;</span>\n    <span matSuffix>.00</span>\n  </mat-form-field>\n</div>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatIconModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
+                },
+                {
+                    "name": "FormFieldSelect",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<mat-form-field appearance=\"fill\">\n  <mat-label>Select</mat-label>\n  <mat-select>\n    <mat-option value=\"one\">First option</mat-option>\n    <mat-option value=\"two\">Second option</mat-option>\n  </mat-select>\n</mat-form-field>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
+                },
+                {
+                    "name": "FormFieldTextarea",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<mat-form-field appearance=\"fill\">\n  <mat-label>Textarea</mat-label>\n  <textarea matInput></textarea>\n</mat-form-field>\n`,\n    moduleMetadata: {\n        imports: [MatFormFieldModule, MatInputModule, MatSelectModule, BrowserAnimationsModule]\n    },\n})"
+                },
+                {
+                    "name": "options",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/form-field/FormField.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "['One', 'Two', 'Three']",
+                    "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                    "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
                 }
             ],
             "src/stories/Header.stories.ts": [
@@ -995,6 +1549,40 @@
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
+            ],
+            "src/stories/components/autocomplete/Autocomplete.stories.ts": [
+                {
+                    "name": "options",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "['One', 'Two', 'Three']",
+                    "rawdescription": "Button types\n- Basic (no color)\n- Primary\n- Accent\n- Warn\n- Disabled\n- DisableRipples (no waves on click)",
+                    "description": "<p>Button types</p>\n<ul>\n<li>Basic (no color)</li>\n<li>Primary</li>\n<li>Accent</li>\n<li>Warn</li>\n<li>Disabled</li>\n<li>DisableRipples (no waves on click)</li>\n</ul>\n"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n    props: args,\n    template: `\n<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\" appearance=\"fill\">\n    <mat-label>Number</mat-label>\n    <input type=\"text\"\n           placeholder=\"Pick one\"\n           aria-label=\"Number\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>`,\n    moduleMetadata: {\n        imports: [MatAutocomplete, MatOption, MatFormField, MatLabel, MatAutocompleteModule]\n    },\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -1003,7 +1591,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 3,
+        "count": 6,
         "status": "low",
         "files": [
             {
@@ -1083,146 +1671,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Accent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Basic",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Basic2",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Disabled",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "DisableRipple",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Fab",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Flat",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Icons",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "MiniFab",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Raised",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Stroked",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 100,
-                "coverageCount": "1/1",
-                "status": "very-good"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Warn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "src/stories/Header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1287,6 +1735,426 @@
                 "type": "interface",
                 "linktype": "interface",
                 "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Accent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DisableRipple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/components/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Warn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/ButtonGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/ButtonGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Fab",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/ButtonGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Flat",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/ButtonGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Icons",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/ButtonGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MiniFab",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/ButtonGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Raised",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/ButtonGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Stroked",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "options",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/autocomplete/Autocomplete.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Indeterminate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/checkbox/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LabelPosition",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "error",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FormFieldError",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FormFieldInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FormFieldLabel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FormFieldPrefixAndSuffix",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FormFieldSelect",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FormFieldTextarea",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormField.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "options",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/components/form-field/FormFieldGroup.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Appearance",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/components/input/Input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/input/Input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Readonly",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Buffer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Colored",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Determinate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Indeterminate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/progress-bar/ProgressBar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Query",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/spinner/Spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Determinate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/spinner/Spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Diameter",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/spinner/Spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Indeterminate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/spinner/Spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "IndeterminateAlias",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/spinner/Spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StrokeWidth",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

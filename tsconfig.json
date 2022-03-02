@@ -17,6 +17,7 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
+      "lib/*": ["projects/sb-legendre-lib/*"],
       "sb-legendre-lib": [
         "dist/sb-legendre-lib/sb-legendre-lib",
         "dist/sb-legendre-lib"

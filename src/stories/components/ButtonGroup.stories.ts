@@ -1,10 +1,15 @@
 import { Meta, Story } from "@storybook/angular/types-6-0";
-import { MatButton, MatButtonModule, MatRippleModule, MatIconModule } from '../../projects/sb-legendre-lib/src/public-api'
+import { MatButton, MatButtonModule, MatRippleModule, MatIconModule } from '../../../projects/sb-legendre-lib/src/public-api'
 
 export default {
     title: 'Global/Buttons',
     component: MatButton,
     // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
+    parameters: {
+        controls: {
+            disable: true
+        },
+    }
 } as Meta;
 
 export const Basic: Story<MatButton> = (args: MatButton) => ({
