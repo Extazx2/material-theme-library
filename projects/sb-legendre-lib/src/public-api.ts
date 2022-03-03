@@ -18,4 +18,7 @@ export * from "@angular/material/progress-bar"
 export * from "@angular/material/progress-spinner"
 export * from "@angular/material/checkbox"
 
+export * from "@angular/material/snack-bar"
+export * from '@angular/material/slider'
+
 // export * from '@angular/material/'

@@ -20,26 +20,7 @@ export default {
             }
         }
     },
-    // moduleMetadata needs to be added for each story.
-    // moduleMetadata: {},
-    // args: {
-    //   // disabled: undefined,
-    //   color: undefined,
-    //   text: undefined
-    // }
 };
-
-/**
- * Button types
- * - Basic (no color)
- * - Primary
- * - Accent
- * - Warn
- * - Disabled
- * - DisableRipples (no waves on click)
- */
-
-const options = ['One', 'Two', 'Three']
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
 export const FormFieldInput: Story = (args) => ({
